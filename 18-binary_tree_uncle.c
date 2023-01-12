@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_uncle - to fix tomorow
+ * binary_tree_uncle - 
  * @node: pointer to the  node
- * Return: brothr or sister of the given node
+ * Return: return the uncle
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
@@ -11,7 +11,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 	{
 		return (NULL);
 	}
-	if (node == node->parent->parent)
+	if (node->parent == node->parent->parent->left)
 	{
 		return (node->parent->parent->left);
 	}
