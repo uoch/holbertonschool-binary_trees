@@ -4,9 +4,10 @@
  * @node: pointer to the  node
  * Return: brothr or sister of the given node
  */
-binary_tree_t *binary_tree_uncle(binary_tree_t *node){
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
+{
 
-	if (!node || !node->parent|| !node->parent->parent)
+	if (!node || !node->parent || !node->parent->parent)
 	{
 		return (NULL);
 	}
@@ -18,6 +19,5 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node){
 	{
 		return (node->parent->parent->right);
 	}
-    return(NULL);
-
+	return (NULL);
 }
