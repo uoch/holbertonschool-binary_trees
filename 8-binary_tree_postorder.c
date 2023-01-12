@@ -2,7 +2,7 @@
 /**
  * binary_tree_postorder- to traves the tree in pretorde [left-right-root]
  * @tree: pointer to the  tree to travers
- * @func: (*func)(int):pointer to the the func to be apply to the node value
+ * @func: (*func)(int):pt to the the func to be apply to the node value
  */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
