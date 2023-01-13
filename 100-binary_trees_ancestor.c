@@ -33,11 +33,13 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	free_list(s_list);
 	return ((binary_tree_t *)last_common);
 }
+
 /**
  * get_ancestors - stor address in linked list
  * @node: pointer to the  node
  * @list: list to stor address
  */
+
 void get_ancestors(const binary_tree_t *node, traves_t **list)
 {
 	traves_t *new = malloc(sizeof(traves_t));
@@ -56,6 +58,7 @@ void get_ancestors(const binary_tree_t *node, traves_t **list)
  * free_list - looks for the uncle
  * @list: pointer to the  node
  */
+
 void free_list(traves_t *list)
 {
 	traves_t *temp;
