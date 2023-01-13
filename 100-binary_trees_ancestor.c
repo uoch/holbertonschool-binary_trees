@@ -12,12 +12,12 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	traves_t *f_temp = f_list, *s_temp = s_list;
 	const binary_tree_t *last_common = NULL;
 
-	if (!first && !second)
+	if (!first || !second)
 		return (NULL);
 	if (first == second)
-		return (binary_tree_t *)first;
+		return ((binary_tree_t *)first);
 	if (first->parent == second)
-		return (binary_tree_t *)second;
+		return ((binary_tree_t *)second);
 	if (second->parent == first)
 		return (binary_tree_t *)first;
 	get_ancestors(first, &f_list);
