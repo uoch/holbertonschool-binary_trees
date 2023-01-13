@@ -20,6 +20,11 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 typedef struct binary_tree_s binary_tree_t;
+typedef struct traves_s {
+	const binary_tree_t *store;
+	struct traves_s *next;
+} traves_t;
+typedef struct traves_s traves_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
@@ -47,7 +52,8 @@ int tree_height(const binary_tree_t *tree);
 int tree_leaves(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-
-
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+void free_list(traves_t *list);
+void get_ancestors(const binary_tree_t *node, traves_t **list);
 
 #endif
