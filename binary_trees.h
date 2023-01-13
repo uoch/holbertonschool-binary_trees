@@ -24,7 +24,6 @@ typedef struct traves_s {
 	const binary_tree_t *store;
 	struct traves_s *next;
 } traves_t;
-typedef struct traves_s traves_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
